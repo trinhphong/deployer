@@ -19,6 +19,9 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
+  username: pguser
+  password: password
+  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -80,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: deployer_production
-  username: deployer
+  database: deployer_tinnq_production
+  username: deployer_tinnq
   password: <%= ENV['DEPLOYER_DATABASE_PASSWORD'] %>
