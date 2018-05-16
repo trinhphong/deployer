@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: deployer_tinnq_production
-  username: deployer_tinnq
+  database: tinnq_production
+  username: tinnq
   password: <%= ENV['DEPLOYER_DATABASE_PASSWORD'] %>
